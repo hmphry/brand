@@ -1,0 +1,31 @@
+# Apache config for the static Storybook on Namecheap shared hosting.
+# Story paths live on the query string (?path=/story/...), so routes are not rewritten.
+
+Options -MultiViews
+DirectoryIndex index.html
+
+<IfModule mod_mime.c>
+  AddType application/javascript .js .mjs
+  AddType application/json .json
+  AddType application/manifest+json .webmanifest
+  AddType application/wasm .wasm
+  AddType image/svg+xml .svg .svgz
+  AddType font/woff2 .woff2
+  AddType font/woff .woff
+  AddType font/ttf .ttf
+</IfModule>
+
+<IfModule mod_headers.c>
+  # Manager files are not all content-hashed, so revalidate instead of caching for a year.
+  <FilesMatch "\.(html|json)$">
+    Header set Cache-Control "no-cache"
+  </FilesMatch>
+  <FilesMatch "\.(js|mjs|css|wasm|woff2|woff|ttf|svg|svgz|png|webp|gif|jpg|jpeg|ico)$">
+    Header set Cache-Control "public, max-age=3600, must-revalidate"
+  </FilesMatch>
+</IfModule>
+
+# Written by SamKirkland/FTP-Deploy-Action. It is a file inventory, not a site asset.
+<Files ".ftp-deploy-sync-state.json">
+  Require all denied
+</Files>
