@@ -47,9 +47,16 @@ export type LockupProps = SigilColorProps &
     variant?: 'normal' | 'stacked';
     /** Preset sigil height. Defaults to `'md'`. */
     size?: LockupSize;
-    /** Overrides the size preset. Any CSS length, e.g. `"12rem"`. */
+    /**
+     * Overrides the size preset: the marks scale so the whole lockup is this
+     * wide. Any CSS length, e.g. `"12rem"` (not a percentage). Ignored for
+     * sizing when `height` is also set.
+     */
     width?: string;
-    /** Overrides the size preset. Any CSS length, e.g. `"6rem"`. */
+    /**
+     * Overrides the size preset and `width`. Sets the sigil height. Any CSS
+     * length, e.g. `"6rem"`.
+     */
     height?: string;
     /**
      * Space between the sigil and the wordmark. Number means px. Defaults to

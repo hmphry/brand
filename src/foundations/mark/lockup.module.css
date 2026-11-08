@@ -2,7 +2,6 @@
   --sigil-size: 5rem;
   display: inline-flex;
   align-items: center;
-  gap: calc(var(--sigil-size) * 0.12);
 }
 
 .sigil,
