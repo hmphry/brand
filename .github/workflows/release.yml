@@ -3,6 +3,8 @@ name: Release
 on:
   push:
     branches: [main]
+  # Manual run publishes the current main version (recovers a failed publish).
+  workflow_dispatch:
 
 permissions:
   contents: write
@@ -25,7 +27,7 @@ jobs:
   # GITHUB_TOKEN do not trigger other workflows.
   publish:
     needs: release-please
-    if: ${{ needs.release-please.outputs.release_created == 'true' }}
+    if: ${{ needs.release-please.outputs.release_created == 'true' || github.event_name == 'workflow_dispatch' }}
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
