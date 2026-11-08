@@ -12,7 +12,8 @@
       "!**/dist",
       "!**/storybook-static",
       "!**/*.svg",
-      "!package-lock.json"
+      "!package-lock.json",
+      "!CHANGELOG.md"
     ]
   },
   "formatter": {
