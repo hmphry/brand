@@ -5,6 +5,7 @@ export type {
   LockupProps,
   SigilColorProps,
   SigilProps,
+  SigilSize,
   StackedWordmarkProps,
   WordmarkColorProps,
   WordmarkProps,
