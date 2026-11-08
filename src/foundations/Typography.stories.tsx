@@ -52,7 +52,8 @@ const BODY = [
     sizeToken: '--font-size-body',
     lineToken: '--line-height-body',
     italic: true,
-    sample: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.',
+    sample:
+      'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.',
   },
   {
     role: 'Small',

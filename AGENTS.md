@@ -8,6 +8,20 @@
 - `npm run dev` — Start Rsbuild playground
 - `npm run build` — Build playground for production
 - `npm run preview` — Preview production playground
+- `npm run build:lib` — Build the publishable `@hmphry/brand` package into `dist/` (Rslib, `rslib.config.ts`)
+- `npm run check` — Types, Biome, Stylelint (also runs on publish)
+
+## Package
+
+- Published as `@hmphry/brand` to GitHub Packages. Entry is `src/index.ts`; tokens ship as `@hmphry/brand/styles.css` (built from `src/styles.css`).
+- Library JS is built in bundle mode (`?react` SVG imports do not work in bundleless mode). CSS Modules go to `dist/index.css`.
+- Anything new that should be public must be exported from `src/index.ts`.
+- Releases are automated by release-please from commits on `main`. Do not bump `package.json` version or edit `CHANGELOG.md` by hand.
+
+## Commits
+
+- Use Conventional Commits: `type(scope): subject` (`feat:`, `fix:`, `feat!:`, `docs:`, `chore:`, ...). commitlint enforces this locally (Husky) and in CI. Types drive version bumps and the changelog.
+- Suggested scopes: `mark`, `button`, `tokens`, `colors`, `build`, `release`.
 
 ## Layout
 
@@ -17,6 +31,8 @@
 - `src/primitives` — atomic components + colocated `*.module.css` / `*.stories.tsx`
 - `src/patterns` — composed patterns (reserved)
 - `src/index.ts` — library barrel (do not use as Rsbuild entry)
+- `src/styles.css` — bundled token stylesheet entry (fonts, colors, surface)
+- `scripts/finalize-css.mjs` — post-build step for `build:lib`
 - `src/main.tsx` — playground entry via `rsbuild.config.ts` `source.entry`
 
 ## Docs

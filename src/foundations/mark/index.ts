@@ -1,3 +1,6 @@
+export { Lockup } from './lockup';
+export { Sigil } from './sigil';
+export { StackedWordmark } from './stacked-wordmark';
 export type {
   LockupProps,
   SigilColorProps,
@@ -6,7 +9,4 @@ export type {
   WordmarkColorProps,
   WordmarkProps,
 } from './types';
-export { Lockup } from './lockup';
-export { Sigil } from './sigil';
-export { StackedWordmark } from './stacked-wordmark';
 export { Wordmark } from './wordmark';
