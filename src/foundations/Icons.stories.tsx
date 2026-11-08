@@ -1,4 +1,4 @@
-import { Bookmark, Heart } from '@phosphor-icons/react';
+import { Bookmark, Copy, Heart } from '@phosphor-icons/react';
 import type { Meta, StoryObj } from '@storybook/react';
 import type { ComponentType, SVGProps } from 'react';
 import styles from './foundations.module.css';
@@ -9,6 +9,7 @@ type IconComponent = ComponentType<SVGProps<SVGSVGElement>>;
 /** Curated icon set. Add @phosphor-icons/react components here, in alphabetical order. */
 const icons: { name: string; Icon: IconComponent }[] = [
   { name: 'Bookmark', Icon: Bookmark },
+  { name: 'Copy', Icon: Copy },
   { name: 'Heart', Icon: Heart },
 ];
 

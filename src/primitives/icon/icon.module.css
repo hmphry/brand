@@ -1,0 +1,26 @@
+.icon {
+  display: inline-block;
+  flex-shrink: 0;
+  width: var(--icon-size);
+  height: var(--icon-size);
+}
+
+.xs {
+  --icon-size: 12px;
+}
+
+.sm {
+  --icon-size: 16px;
+}
+
+.md {
+  --icon-size: 20px;
+}
+
+.lg {
+  --icon-size: 24px;
+}
+
+.xl {
+  --icon-size: 32px;
+}
