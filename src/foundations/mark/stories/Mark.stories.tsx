@@ -40,8 +40,8 @@ type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
   args: {
-    variant: "stacked"
-  }
+    variant: 'stacked',
+  },
 };
 
 export const StackedLockup: Story = {
