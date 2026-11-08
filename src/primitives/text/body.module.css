@@ -1,0 +1,29 @@
+.body {
+  margin: 0;
+  font-family: var(--font-body);
+  font-weight: var(--font-weight-regular);
+}
+
+.lead {
+  font-size: var(--font-size-lead);
+  line-height: var(--line-height-lead);
+}
+
+.copy {
+  font-size: var(--font-size-body);
+  line-height: var(--line-height-body);
+}
+
+.small {
+  font-size: var(--font-size-small);
+  line-height: var(--line-height-small);
+}
+
+.caption {
+  font-size: var(--font-size-caption);
+  line-height: var(--line-height-caption);
+}
+
+.italic {
+  font-style: italic;
+}
