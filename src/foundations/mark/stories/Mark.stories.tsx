@@ -1,7 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { Lockup } from '../lockup';
-import { StackedWordmark } from '../stacked-wordmark';
-import { Wordmark } from '../wordmark';
 
 const meta = {
   title: 'Foundations/Logo',
@@ -33,6 +31,7 @@ const meta = {
     },
     width: { control: 'text' },
     height: { control: 'text' },
+    spacing: { control: 'text' },
     keyColor: { control: 'text' },
     backgroundColor: { control: 'text' },
     borderColor: { control: 'text' },
@@ -57,14 +56,8 @@ export const StackedLockup: Story = {
   },
 };
 
-export const SingleWordmark: Story = {
-  name: 'Wordmark',
-  render: () => <Wordmark width="16rem" />,
-  parameters: { controls: { disable: true } },
-};
-
-export const StackedWordmarkStory: Story = {
-  name: 'Stacked wordmark',
-  render: () => <StackedWordmark width="10rem" />,
-  parameters: { controls: { disable: true } },
+export const Spacing: Story = {
+  args: {
+    spacing: 32,
+  },
 };

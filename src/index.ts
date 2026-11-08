@@ -4,8 +4,10 @@ export type {
   SigilProps,
   SigilSize,
   StackedWordmarkProps,
+  StackedWordmarkSize,
   WordmarkColorProps,
   WordmarkProps,
+  WordmarkSize,
 } from './foundations/mark';
 export {
   Lockup,

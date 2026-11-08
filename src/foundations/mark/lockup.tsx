@@ -1,7 +1,7 @@
 import type { CSSProperties } from 'react';
 import styles from './lockup.module.css';
 import { Sigil } from './sigil';
-import { SIZE_HEIGHTS } from './sizes';
+import { SIZE_HEIGHTS, STACKED_RATIO, WORDMARK_RATIO } from './sizes';
 import { StackedWordmark } from './stacked-wordmark';
 import type { LockupProps } from './types';
 import { Wordmark } from './wordmark';
@@ -11,6 +11,7 @@ export function Lockup({
   size = 'md',
   width,
   height,
+  spacing,
   keyColor,
   backgroundColor,
   borderColor,
@@ -19,6 +20,7 @@ export function Lockup({
   const style = {
     '--sigil-size': height ?? SIZE_HEIGHTS[size],
     ...(width ? { width } : {}),
+    gap: spacing,
   } as CSSProperties;
 
   return (
@@ -40,10 +42,16 @@ export function Lockup({
         <StackedWordmark
           aria-hidden
           className={styles.stacked}
+          height={`calc(var(--sigil-size) * ${STACKED_RATIO})`}
           textColor={textColor}
         />
       ) : (
-        <Wordmark aria-hidden className={styles.single} textColor={textColor} />
+        <Wordmark
+          aria-hidden
+          className={styles.single}
+          height={`calc(var(--sigil-size) * ${WORDMARK_RATIO})`}
+          textColor={textColor}
+        />
       )}
     </div>
   );

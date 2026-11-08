@@ -5,18 +5,8 @@
   gap: calc(var(--sigil-size) * 0.12);
 }
 
-.sigil {
-  display: block;
-}
-
-.stacked {
-  display: block;
-  height: calc(var(--sigil-size) * 0.7);
-  width: auto;
-}
-
+.sigil,
+.stacked,
 .single {
   display: block;
-  height: calc(var(--sigil-size) * 0.38);
-  width: auto;
 }
