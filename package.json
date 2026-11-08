@@ -38,7 +38,7 @@
     "preview": "rsbuild preview",
     "storybook": "storybook dev -p 6006",
     "storybook:mcp": "node .storybook/dev-mcp.mjs",
-    "build-storybook": "storybook build",
+    "build-storybook": "storybook build && node .storybook/finalize-static.mjs",
     "check-types": "tsc --noEmit",
     "lint": "biome check .",
     "lint:fix": "biome check . --write",

@@ -1,0 +1,83 @@
+name: Deploy Storybook
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+  workflow_dispatch:
+
+# Queue runs on the same ref so a main deploy finishes before the next one starts.
+# Pull request builds cancel when a newer commit is pushed.
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    name: Build Storybook
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7
+
+      - name: Setup Node
+        uses: actions/setup-node@v7
+        with:
+          node-version: 22.19.0
+          cache: npm
+
+      - name: Install
+        run: npm ci
+
+      - name: Build static Storybook
+        run: npm run build-storybook
+
+      - name: Upload static build
+        uses: actions/upload-artifact@v7
+        with:
+          name: storybook-static
+          path: storybook-static
+          include-hidden-files: true
+          retention-days: 7
+
+  deploy:
+    name: Deploy to Namecheap
+    needs: build
+    # Manual runs publish only when dispatched from main, so a branch run cannot overwrite production.
+    if: github.ref == 'refs/heads/main' && (github.event_name == 'push' || github.event_name == 'workflow_dispatch')
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download static build
+        uses: actions/download-artifact@v8
+        with:
+          name: storybook-static
+          path: storybook-static
+
+      - name: Confirm deploy payload
+        run: |
+          test -f storybook-static/index.html
+          test -f storybook-static/.htaccess
+          test -f storybook-static/manifests/components.json
+
+      # FTP_SERVER / FTP_USERNAME / FTP_PASSWORD are repo secrets.
+      # The FTP account is jailed to the subdomain docroot, so server-dir ./ is
+      # /home/hmphqcxx/sites/brand.emilyhumphrey.com/httpdocs.
+      # protocol ftps is explicit TLS on port 21. security loose still encrypts;
+      # Namecheap shared certificates often fail this action's strict check.
+      - name: Deploy over FTPS
+        uses: SamKirkland/FTP-Deploy-Action@v4.4.0
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          protocol: ftps
+          port: 21
+          security: loose
+          local-dir: storybook-static/
+          server-dir: ./
+          timeout: 60000
+          log-level: standard

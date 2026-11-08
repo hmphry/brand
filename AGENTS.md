@@ -2,9 +2,9 @@
 
 ## Commands
 
-- `npm run storybook` — Start Storybook (primary surface)
-- `npm run storybook:mcp` — Start Storybook with the MCP server at http://localhost:6006/mcp
-- `npm run build-storybook` — Build static Storybook
+- `npm run storybook` — Start Storybook (primary surface). MCP is at http://localhost:6006/mcp while it runs.
+- `npm run storybook:mcp` — Same dev server; the command Cursor and other agents should use for MCP.
+- `npm run build-storybook` — Static Storybook. Includes `/manifests/components.json`. `/mcp` is not part of the static build.
 - `npm run dev` — Start Rsbuild playground
 - `npm run build` — Build playground for production
 - `npm run preview` — Preview production playground

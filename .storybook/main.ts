@@ -1,7 +1,5 @@
 import type { StorybookConfig } from 'storybook-react-rsbuild';
 
-const mcpEnabled = process.env.STORYBOOK_MCP === '1';
-
 const config: StorybookConfig = {
   framework: {
     name: 'storybook-react-rsbuild',
@@ -12,13 +10,13 @@ const config: StorybookConfig = {
     },
   },
   stories: ['../src/**/*.stories.@(ts|tsx)'],
-  addons: [
-    '@storybook/addon-docs',
-    ...(mcpEnabled ? ['@storybook/addon-mcp' as const] : []),
-  ],
+  addons: ['@storybook/addon-docs', '@storybook/addon-mcp'],
   features: {
     changeDetection: false,
-    ...(mcpEnabled ? { componentsManifest: true } : {}),
+    // Generates manifests/components.json (and docs.json when docs exist)
+    // during `storybook dev` and `storybook build`. The addon's /mcp HTTP
+    // endpoint is only attached to the dev server.
+    componentsManifest: true,
   },
 };
 
