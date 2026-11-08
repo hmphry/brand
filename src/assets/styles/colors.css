@@ -1,0 +1,139 @@
+/* Brand color tokens. */
+:root {
+  /* Pearl */
+  --color-pearl-lightest: oklch(100.0% 0 89.9);
+  --color-pearl-lighter: oklch(98.5% 0 89.9);
+  --color-pearl-light: oklch(97.0% 0 89.9);
+  --color-pearl-main: oklch(95.2% 0 89.9);
+  --color-pearl-dark: oklch(93.1% 0 89.9);
+  --color-pearl-darker: oklch(91.0% 0 89.9);
+  --color-pearl-darkest: oklch(88.5% 0 89.9);
+
+  /* Chérie */
+  --color-cherie-lightest: oklch(97.2% 0.019 83.1);
+  --color-cherie-lighter: oklch(93.6% 0.037 80.6);
+  --color-cherie-light: oklch(90.0% 0.054 80.7);
+  --color-cherie-main: oklch(86.1% 0.072 80.6);
+  --color-cherie-dark: oklch(80.9% 0.083 79.6);
+  --color-cherie-darker: oklch(75.2% 0.086 77.7);
+  --color-cherie-darkest: oklch(69.2% 0.086 73.9);
+  --color-cherie-companion: oklch(83.1% 0.052 321.9);
+  --color-cherie-accent: oklch(47.2% 0.047 330.4);
+
+  /* Cashmere */
+  --color-cashmere-lightest: oklch(94.6% 0.01 87.5);
+  --color-cashmere-lighter: oklch(92.9% 0.012 84.6);
+  --color-cashmere-light: oklch(89.1% 0.018 78.2);
+  --color-cashmere-main: oklch(86.4% 0.021 79.1);
+  --color-cashmere-dark: oklch(85.1% 0.023 80.7);
+  --color-cashmere-darker: oklch(82.7% 0.025 79.7);
+  --color-cashmere-darkest: oklch(80.3% 0.027 78.9);
+
+  /* Primrose */
+  --color-primrose-lightest: oklch(97.9% 0.032 99.2);
+  --color-primrose-lighter: oklch(96.6% 0.05 98.6);
+  --color-primrose-light: oklch(93.6% 0.092 99.9);
+  --color-primrose-main: oklch(91.7% 0.097 100.4);
+  --color-primrose-dark: oklch(90.9% 0.098 99.8);
+  --color-primrose-darker: oklch(89.1% 0.102 99.5);
+  --color-primrose-darkest: oklch(87.3% 0.105 99.3);
+  --color-primrose-companion: oklch(85.9% 0.053 239.6);
+  --color-primrose-accent: oklch(49.2% 0.048 245.7);
+
+  /* Camellia */
+  --color-camellia-lightest: oklch(94.4% 0.029 33.7);
+  --color-camellia-lighter: oklch(90.8% 0.048 32.5);
+  --color-camellia-light: oklch(83.9% 0.09 32.6);
+  --color-camellia-main: oklch(80.1% 0.101 32.9);
+  --color-camellia-dark: oklch(78.1% 0.107 32.4);
+  --color-camellia-darker: oklch(75.1% 0.116 32.4);
+  --color-camellia-darkest: oklch(72.1% 0.124 32.5);
+  --color-camellia-companion: oklch(82.7% 0.055 206.5);
+  --color-camellia-accent: oklch(48.9% 0.049 210.7);
+
+  /* Peony */
+  --color-peony-lightest: oklch(95.0% 0.025 8.6);
+  --color-peony-lighter: oklch(92.3% 0.04 10.3);
+  --color-peony-light: oklch(85.6% 0.072 12.2);
+  --color-peony-main: oklch(77.6% 0.111 12.9);
+  --color-peony-dark: oklch(73.4% 0.129 12.9);
+  --color-peony-darker: oklch(66.9% 0.152 13.5);
+  --color-peony-darkest: oklch(60.8% 0.174 15.1);
+  --color-peony-companion: oklch(86.8% 0.059 156.4);
+  --color-peony-accent: oklch(51.3% 0.043 165.9);
+
+  /* Ballerina */
+  --color-ballerina-lightest: oklch(94.0% 0.02 2.3);
+  --color-ballerina-lighter: oklch(89.5% 0.033 6);
+  --color-ballerina-light: oklch(82.8% 0.057 8.8);
+  --color-ballerina-main: oklch(76.5% 0.089 7.7);
+  --color-ballerina-dark: oklch(74.9% 0.089 6.9);
+  --color-ballerina-darker: oklch(73.6% 0.089 6.7);
+  --color-ballerina-darkest: oklch(72.0% 0.089 5.9);
+  --color-ballerina-companion: oklch(85.9% 0.053 239.6);
+  --color-ballerina-accent: oklch(49.2% 0.048 245.7);
+
+  /* Rosette */
+  --color-rosette-lightest: oklch(94.2% 0.019 356.4);
+  --color-rosette-lighter: oklch(89.2% 0.033 353.4);
+  --color-rosette-light: oklch(80.4% 0.058 356.2);
+  --color-rosette-main: oklch(71.3% 0.076 357.2);
+  --color-rosette-dark: oklch(64.0% 0.092 356.7);
+  --color-rosette-darker: oklch(56.7% 0.104 358.3);
+  --color-rosette-darkest: oklch(49.3% 0.108 359.7);
+  --color-rosette-companion: oklch(82.7% 0.055 206.5);
+  --color-rosette-accent: oklch(48.9% 0.049 210.7);
+
+  /* Wisteria */
+  --color-wisteria-lightest: oklch(95.8% 0.015 322.3);
+  --color-wisteria-lighter: oklch(93.2% 0.023 321.4);
+  --color-wisteria-light: oklch(87.7% 0.041 322.2);
+  --color-wisteria-main: oklch(83.1% 0.052 321.9);
+  --color-wisteria-dark: oklch(80.6% 0.057 322.3);
+  --color-wisteria-darker: oklch(77.1% 0.066 322);
+  --color-wisteria-darkest: oklch(73.5% 0.075 321.8);
+  --color-wisteria-companion: oklch(86.1% 0.072 80.6);
+  --color-wisteria-accent: oklch(56.3% 0.06 73.3);
+
+  /* Jade */
+  --color-jade-lightest: oklch(96.8% 0.016 156.9);
+  --color-jade-lighter: oklch(95.0% 0.026 156);
+  --color-jade-light: oklch(90.9% 0.048 156.5);
+  --color-jade-main: oklch(86.8% 0.059 156.4);
+  --color-jade-dark: oklch(84.7% 0.064 156.7);
+  --color-jade-darker: oklch(81.5% 0.072 157.1);
+  --color-jade-darkest: oklch(78.2% 0.08 157.2);
+  --color-jade-companion: oklch(77.6% 0.111 12.9);
+  --color-jade-accent: oklch(53.6% 0.081 359.4);
+
+  /* Ondine */
+  --color-ondine-lightest: oklch(95.1% 0.019 204.8);
+  --color-ondine-lighter: oklch(91.8% 0.029 204.8);
+  --color-ondine-light: oklch(85.5% 0.049 207.7);
+  --color-ondine-main: oklch(82.7% 0.055 206.5);
+  --color-ondine-dark: oklch(81.3% 0.058 207.3);
+  --color-ondine-darker: oklch(78.7% 0.062 209.1);
+  --color-ondine-darkest: oklch(76.0% 0.067 210.8);
+  --color-ondine-companion: oklch(80.1% 0.101 32.9);
+  --color-ondine-accent: oklch(57.1% 0.085 36.1);
+
+  /* Celeste */
+  --color-celeste-lightest: oklch(96.5% 0.013 241);
+  --color-celeste-lighter: oklch(94.7% 0.023 237.6);
+  --color-celeste-light: oklch(90.1% 0.041 238.1);
+  --color-celeste-main: oklch(85.9% 0.053 239.6);
+  --color-celeste-dark: oklch(83.8% 0.058 238.9);
+  --color-celeste-darker: oklch(80.5% 0.067 239.9);
+  --color-celeste-darkest: oklch(77.3% 0.077 240.7);
+  --color-celeste-companion: oklch(86.1% 0.072 80.6);
+  --color-celeste-accent: oklch(56.3% 0.06 73.3);
+
+  /* Velvet */
+  --color-velvet-lightest: oklch(58.9% 0.007 59.6);
+  --color-velvet-lighter: oklch(55.8% 0.006 48.6);
+  --color-velvet-light: oklch(52.7% 0.006 48.6);
+  --color-velvet-main: oklch(49.8% 0.006 67.7);
+  --color-velvet-dark: oklch(47.2% 0.005 78.3);
+  --color-velvet-darker: oklch(42.1% 0.004 67.7);
+  --color-velvet-darkest: oklch(36.6% 0.003 345.4);
+}

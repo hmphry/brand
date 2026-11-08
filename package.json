@@ -1,0 +1,45 @@
+{
+  "name": "brand",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "rsbuild build",
+    "dev": "rsbuild",
+    "preview": "rsbuild preview",
+    "storybook": "storybook dev -p 6006",
+    "storybook:mcp": "node .storybook/dev-mcp.mjs",
+    "build-storybook": "storybook build",
+    "check-types": "tsc --noEmit",
+    "lint": "biome check .",
+    "lint:fix": "biome check . --write",
+    "lint:css": "stylelint \"src/**/*.css\"",
+    "lint:css:fix": "stylelint \"src/**/*.css\" --fix",
+    "check": "npm run check-types && npm run lint && npm run lint:css",
+    "check:fix": "npm run lint:fix && npm run lint:css:fix",
+    "format": "biome format . --write"
+  },
+  "dependencies": {
+    "@phosphor-icons/react": "^2.1.10",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^2.6.5",
+    "@rsbuild/core": "^2.3.1",
+    "@rsbuild/plugin-react": "^2.1.1",
+    "@rsbuild/plugin-svgr": "^2.0.5",
+    "@storybook/addon-docs": "^10.6.6",
+    "@storybook/addon-mcp": "^10.6.6",
+    "@types/node": "^26.6.6",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "storybook": "^10.6.6",
+    "storybook-react-rsbuild": "^3.6.2",
+    "stylelint": "^18.0.0",
+    "typescript": "^7.0.2"
+  },
+  "volta": {
+    "node": "22.19.0"
+  }
+}

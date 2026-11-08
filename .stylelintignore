@@ -1,0 +1,5 @@
+# Design-token source of truth — raw color literals are the point here.
+# Component CSS must not be added to this directory.
+src/foundations/tokens.css
+src/foundations/palette.css
+src/foundations/fonts.css

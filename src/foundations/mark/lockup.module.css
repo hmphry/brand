@@ -1,0 +1,24 @@
+.lockup {
+  --sigil-size: 5rem;
+  display: inline-flex;
+  align-items: center;
+  gap: calc(var(--sigil-size) * 0.28);
+}
+
+.sigil {
+  display: block;
+  height: var(--sigil-size);
+  width: auto;
+}
+
+.stacked {
+  display: block;
+  height: calc(var(--sigil-size) * 0.7);
+  width: auto;
+}
+
+.single {
+  display: block;
+  height: calc(var(--sigil-size) * 0.38);
+  width: auto;
+}
