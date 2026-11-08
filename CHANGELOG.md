@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.0](https://github.com/hmphry/brand/compare/brand-v1.0.0...brand-v1.1.0) (2026-11-08)
+
+
+### Features
+
+* **mark:** add size, layout, and spacing props to logo marks ([#6](https://github.com/hmphry/brand/issues/6)) ([029f059](https://github.com/hmphry/brand/commit/029f059a986801b76b50fa4072ee625219e922bb))
+
 ## 1.0.0 (2026-11-08)
 
 
