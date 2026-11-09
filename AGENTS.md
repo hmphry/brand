@@ -25,13 +25,13 @@
 
 ## Layout
 
-- `src/assets/styles` — global CSS (`fonts`, `colors`, `surface`)
+- `src/assets/styles` — global CSS (`reset`, `fonts`, `colors`, `surface`)
 - `src/assets/svgs` — brand SVG marks
 - `src/foundations` — foundation stories + colocated `*.module.css`
 - `src/primitives` — atomic components + colocated `*.module.css` / `*.stories.tsx`
 - `src/patterns` — composed patterns (reserved)
 - `src/index.ts` — library barrel (do not use as Rsbuild entry)
-- `src/styles.css` — bundled token stylesheet entry (fonts, colors, surface)
+- `src/styles.css` — bundled stylesheet entry (reset, fonts, colors, surface)
 - `scripts/finalize-css.mjs` — post-build step for `build:lib`
 - `src/main.tsx` — playground entry via `rsbuild.config.ts` `source.entry`
 

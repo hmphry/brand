@@ -1,4 +1,5 @@
-/* Complete brand token sheet. Order matters: surface.css reads colors.css. */
+/* Complete brand sheet. Order: reset, then tokens. surface.css reads colors.css. */
+@import "./assets/styles/reset.css";
 @import "./assets/styles/fonts.css";
 @import "./assets/styles/colors.css";
 @import "./assets/styles/surface.css";

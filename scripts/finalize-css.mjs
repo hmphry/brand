@@ -9,7 +9,7 @@ const outDir = join(root, 'dist', 'css');
 
 await mkdir(outDir, { recursive: true });
 
-for (const name of ['fonts', 'colors', 'surface']) {
+for (const name of ['reset', 'fonts', 'colors', 'surface']) {
   await copyFile(
     join(root, 'src', 'assets', 'styles', `${name}.css`),
     join(outDir, `${name}.css`),

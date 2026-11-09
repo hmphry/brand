@@ -19,6 +19,7 @@
       "import": "./dist/index.js"
     },
     "./styles.css": "./dist/css/styles.css",
+    "./reset.css": "./dist/css/reset.css",
     "./fonts.css": "./dist/css/fonts.css",
     "./colors.css": "./dist/css/colors.css",
     "./surface.css": "./dist/css/surface.css",
