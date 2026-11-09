@@ -51,11 +51,12 @@ export function Header() {
 | Import                      | Contents                                                                                       |
 | --------------------------- | ---------------------------------------------------------------------------------------------- |
 | `@hmphry/brand/styles.css`  | Everything below, in one file                                                                  |
+| `@hmphry/brand/reset.css`   | Box model, margins, media, and form controls. Body uses surface tokens                         |
 | `@hmphry/brand/fonts.css`   | Lora, Quicksand, DM Mono                                                                       |
 | `@hmphry/brand/colors.css`  | Color palette (`--color-<name>-<lightest..darkest>`)                                           |
 | `@hmphry/brand/surface.css` | Theme aliases, semantic colors, space, radius, type, shadow and z-index scales, sigil defaults |
 
-`surface.css` reads variables from `colors.css`, so load them in that order if you import them separately.
+If you import the sheets separately, load `reset.css`, `fonts.css`, `colors.css`, then `surface.css`. `reset.css` paints the page with surface tokens, and `surface.css` reads variables from `colors.css`.
 
 Browser baseline: modern browsers with `oklch()` and relative color syntax (`oklch(from ...)`).
 
@@ -65,7 +66,7 @@ Browser baseline: modern browsers with `oklch()` and relative color syntax (`okl
 - `src/primitives` — atomic building blocks
 - `src/patterns` — composed UI (empty for now)
 - `src/index.ts` — public library exports
-- `src/styles.css` — bundled token stylesheet entry
+- `src/styles.css` — bundled stylesheet entry (reset, fonts, colors, surface)
 - `src/main.tsx` — thin playground entry
 
 ## Setup

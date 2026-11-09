@@ -15,6 +15,8 @@ export {
   StackedWordmark,
   Wordmark,
 } from './foundations/mark';
+export type { NavItemProps, SidebarProps } from './patterns/sidebar';
+export { NavItem, Sidebar } from './patterns/sidebar';
 export type { ButtonProps } from './primitives/Button';
 export { Button } from './primitives/Button';
 export type { IconName, IconProps, IconSize } from './primitives/icon';

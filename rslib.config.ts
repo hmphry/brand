@@ -47,5 +47,14 @@ export default defineConfig({
     // Rslib defaults to `node`; `web` is required to process CSS.
     target: 'web',
   },
+  tools: {
+    cssLoader: {
+      // Keep `../fonts/` as authored. finalize-css copies the files to
+      // `dist/fonts`, which is the same relative path from `dist/css`.
+      url: {
+        filter: (url) => !url.startsWith('../fonts/'),
+      },
+    },
+  },
   plugins: [pluginReact(), pluginSvgr({ mixedImport: true })],
 });

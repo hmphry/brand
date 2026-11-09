@@ -1,4 +1,5 @@
 import type { Preview } from '@storybook/react';
+import '../src/assets/styles/reset.css';
 import '../src/assets/styles/fonts.css';
 import '../src/assets/styles/colors.css';
 import '../src/assets/styles/surface.css';
