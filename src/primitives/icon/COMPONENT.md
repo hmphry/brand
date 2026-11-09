@@ -8,7 +8,7 @@ One `Icon` component. Callers pick an icon with `ICONS` (for example `ICONS.HEAR
 
 ## Requirements
 
-- `name`: required. One of the values in `ICONS` (`bookmark | copy | heart`).
+- `name`: required. One of the values in `ICONS` (`about | articles | bookmark | contact | copy | essays | heart | home | projects`).
 - `size`: `xs | sm | md | lg | xl`. Default `md`. Maps to 12, 16, 20, 24, and 32 px.
 - `width`, `height`: optional CSS strings that override `size`. If only one is passed, it applies to both axes, so the glyph scales with it. If both are passed and differ, the glyph fits the smaller side.
 - `color`: optional CSS string. Icons use `currentColor`, so this colors the glyph. Accepts a token (`var(--color-velvet-main)`) or a raw value.

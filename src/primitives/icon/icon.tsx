@@ -1,12 +1,28 @@
-import { Bookmark, Copy, Heart } from '@phosphor-icons/react';
+import {
+  Article,
+  Bookmark,
+  Copy,
+  Factory,
+  Heart,
+  House,
+  NotePencil,
+  Phone,
+  UserRectangle,
+} from '@phosphor-icons/react';
 import type { ComponentType, SVGProps } from 'react';
 import styles from './icon.module.css';
 import type { IconName, IconProps } from './types';
 
 const registry: Record<IconName, ComponentType<SVGProps<SVGSVGElement>>> = {
+  about: UserRectangle,
+  articles: Article,
   bookmark: Bookmark,
+  contact: Phone,
   copy: Copy,
+  essays: NotePencil,
   heart: Heart,
+  home: House,
+  projects: Factory,
 };
 
 export function Icon({

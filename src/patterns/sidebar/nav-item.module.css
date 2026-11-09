@@ -21,7 +21,7 @@
 }
 
 .active {
-  color: var(--color-ink);
+  color: var(--theme-primary-main);
 }
 
 .active .label {

@@ -1,4 +1,14 @@
-import { Bookmark, Copy, Heart } from '@phosphor-icons/react';
+import {
+  Article,
+  Bookmark,
+  Copy,
+  Factory,
+  Heart,
+  House,
+  NotePencil,
+  Phone,
+  UserRectangle,
+} from '@phosphor-icons/react';
 import type { Meta, StoryObj } from '@storybook/react';
 import type { ComponentType, SVGProps } from 'react';
 import styles from './foundations.module.css';
@@ -8,9 +18,15 @@ type IconComponent = ComponentType<SVGProps<SVGSVGElement>>;
 
 /** Curated icon set. Add @phosphor-icons/react components here, in alphabetical order. */
 const icons: { name: string; Icon: IconComponent }[] = [
+  { name: 'About', Icon: UserRectangle },
+  { name: 'Articles', Icon: Article },
   { name: 'Bookmark', Icon: Bookmark },
+  { name: 'Contact', Icon: Phone },
   { name: 'Copy', Icon: Copy },
+  { name: 'Essays', Icon: NotePencil },
   { name: 'Heart', Icon: Heart },
+  { name: 'Home', Icon: House },
+  { name: 'Projects', Icon: Factory },
 ];
 
 function IconSheet() {

@@ -18,25 +18,25 @@ type Story = StoryObj<typeof meta>;
 export const Default: Story = {
   render: () => (
     <Sidebar>
-      <NavItem title="Home" icon={ICONS.HEART} active />
-      <NavItem title="Articles" icon={ICONS.BOOKMARK} />
-      <NavItem title="Writing" icon={ICONS.COPY} />
-      <NavItem title="Projects" icon={ICONS.BOOKMARK} />
-      <NavItem title="About" icon={ICONS.HEART} />
-      <NavItem title="Contact" icon={ICONS.COPY} />
+      <NavItem title="Home" icon={ICONS.HOME} active />
+      <NavItem title="Articles" icon={ICONS.ARTICLES} />
+      <NavItem title="Writing" icon={ICONS.ESSAYS} />
+      <NavItem title="Projects" icon={ICONS.PROJECTS} />
+      <NavItem title="About" icon={ICONS.ABOUT} />
+      <NavItem title="Contact" icon={ICONS.CONTACT} />
     </Sidebar>
   ),
 };
 
 export const NavItemAlone: Story = {
-  render: () => <NavItem title="Home" icon={ICONS.HEART} />,
+  render: () => <NavItem title="Home" icon={ICONS.HOME} />,
   parameters: {
     layout: 'centered',
   },
 };
 
 export const NavItemActive: Story = {
-  render: () => <NavItem title="Home" icon={ICONS.HEART} active />,
+  render: () => <NavItem title="Home" icon={ICONS.HOME} active />,
   parameters: {
     layout: 'centered',
   },
