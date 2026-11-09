@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.0](https://github.com/hmphry/brand/compare/brand-v1.1.0...brand-v1.2.0) (2026-11-09)
+
+
+### Features
+
+* add sidebar, local fonts, and a css reset ([#8](https://github.com/hmphry/brand/issues/8)) ([23e8768](https://github.com/hmphry/brand/commit/23e876818432e962900911aab6e209b24b9f2353))
+
 ## [1.1.0](https://github.com/hmphry/brand/compare/brand-v1.0.0...brand-v1.1.0) (2026-11-08)
 
 
