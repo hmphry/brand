@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.4.0](https://github.com/hmphry/brand/compare/brand-v1.3.0...brand-v1.4.0) (2026-11-18)
+
+
+### Features
+
+* make sidebar nav items interactive with stable layout ([#13](https://github.com/hmphry/brand/issues/13)) ([63992e2](https://github.com/hmphry/brand/commit/63992e21b849682d08ef971a23a58d37892a0ae9))
+
 ## [1.3.0](https://github.com/hmphry/brand/compare/brand-v1.2.0...brand-v1.3.0) (2026-11-18)
 
 
