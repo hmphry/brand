@@ -4,12 +4,23 @@
   align-items: center;
   gap: 0;
   margin: 0;
-  padding: 0;
+  padding: var(--space-2);
+  border-radius: var(--radius-lg);
+  background-color: transparent;
   color: var(--color-ink-muted);
+  transition:
+    background-color 200ms ease,
+    color 200ms ease;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .item {
+    transition: none;
+  }
 }
 
 .item:hover {
-  color: var(--theme-primary-darker);
+  color: var(--theme-primary-darkest);
 }
 
 .icon {
@@ -19,18 +30,12 @@
 .label {
   font-family: var(--font-body);
   font-size: var(--font-size-small);
-  font-weight: var(--font-weight-regular);
+  font-weight: var(--font-weight-medium);
   line-height: var(--line-height-small);
   text-align: center;
 }
 
 .active {
-  padding: var(--space-2);
-  border-radius: var(--radius-lg);
   background: var(--theme-primary-lighter);
   color: var(--theme-primary-darkest);
-}
-
-.active .label {
-  font-weight: var(--font-weight-medium);
 }
