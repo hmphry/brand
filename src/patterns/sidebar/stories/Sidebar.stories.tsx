@@ -18,7 +18,7 @@ function Navigation() {
   const [activeTitle, setActiveTitle] = useState('Home');
 
   return (
-    <Sidebar brandHref={null}>
+    <Sidebar>
       {NAV_ITEMS.map((item) => (
         <a
           key={item.title}
