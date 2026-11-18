@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: var(--space-2);
+  gap: 0;
   margin: 0;
   padding: 0;
   color: var(--color-ink-muted);
@@ -21,7 +21,10 @@
 }
 
 .active {
-  color: var(--theme-primary-main);
+  padding: var(--space-2);
+  border-radius: var(--radius-lg);
+  background: var(--theme-primary-lighter);
+  color: var(--theme-primary-darkest);
 }
 
 .active .label {
