@@ -20,6 +20,12 @@
   gap: var(--space-4);
 }
 
+.sigilLink {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+}
+
 .sigil {
   display: block;
 }
