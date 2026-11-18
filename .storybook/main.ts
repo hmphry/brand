@@ -10,7 +10,11 @@ const config: StorybookConfig = {
     },
   },
   stories: ['../src/**/*.stories.@(ts|tsx)'],
-  addons: ['@storybook/addon-docs', '@storybook/addon-mcp'],
+  addons: [
+    '@storybook/addon-docs',
+    '@storybook/addon-a11y',
+    '@storybook/addon-mcp',
+  ],
   features: {
     changeDetection: false,
     // Generates manifests/components.json (and docs.json when docs exist)

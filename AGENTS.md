@@ -5,6 +5,8 @@
 - `npm run storybook` — Start Storybook (primary surface). MCP is at http://localhost:6006/mcp while it runs.
 - `npm run storybook:mcp` — Same dev server; the command Cursor and other agents should use for MCP.
 - `npm run build-storybook` — Static Storybook. Includes `/manifests/components.json`. `/mcp` is not part of the static build.
+- `npm run test-storybook` — Accessibility tests (axe via test-runner) against a Storybook already running on port 6006. Needs `npx playwright install chromium` once.
+- `npm run test-storybook:ci` — Builds Storybook, serves it on port 6006, then runs the a11y tests. Same as CI.
 - `npm run dev` — Start Rsbuild playground
 - `npm run build` — Build playground for production
 - `npm run preview` — Preview production playground

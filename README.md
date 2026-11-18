@@ -83,6 +83,8 @@ npm install
 npm run storybook       # Storybook at http://localhost:6006 (MCP at /mcp)
 npm run storybook:mcp   # Same dev server; documented entry for the MCP client
 npm run build-storybook # Static Storybook build, including component manifests
+npm run test-storybook  # Accessibility tests against a running Storybook (run `npx playwright install chromium` once)
+npm run test-storybook:ci # Build Storybook, serve it, and run the accessibility tests (as CI does)
 npm run dev             # Playground at http://localhost:3000
 npm run build           # Production playground build
 npm run preview         # Preview production build
