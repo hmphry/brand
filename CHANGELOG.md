@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.3.0](https://github.com/hmphry/brand/compare/brand-v1.2.0...brand-v1.3.0) (2026-11-18)
+
+
+### Features
+
+* sidebar active nav chip, palette update, and a11y tests ([#10](https://github.com/hmphry/brand/issues/10)) ([d0e73d2](https://github.com/hmphry/brand/commit/d0e73d262b99fdd678faf5bd03da97baef106982))
+
 ## [1.2.0](https://github.com/hmphry/brand/compare/brand-v1.1.0...brand-v1.2.0) (2026-11-09)
 
 
